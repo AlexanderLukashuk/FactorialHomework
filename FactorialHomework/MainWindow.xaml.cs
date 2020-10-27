@@ -36,17 +36,18 @@ namespace FactorialHomework
                 ThreadPool.QueueUserWorkItem(state =>
                 {
 
-                    if (number == 0)
-                    {
-                        factorial = 1;
-                    }
-                    else
-                    {
-                        for (int i = 1; i <= number; i++)
-                        {
-                            factorial *= i;
-                        }
-                    }
+                    //if (number == 0)
+                    //{
+                    //    factorial = 1;
+                    //}
+                    //else
+                    //{
+                    //    for (int i = 1; i <= number; i++)
+                    //    {
+                    //        factorial *= i;
+                    //    }
+                    //}
+                    factorial = Factorial(number);
 
                     MessageBox.Show($"Факториал числа {number} = {factorial}");
                     MessageBox.Show("Вычисление завершено");
@@ -57,8 +58,18 @@ namespace FactorialHomework
             {
                 MessageBox.Show("Ошибка! Повторите ввод");
             }
+        }
 
-
+        static int Factorial(int number)
+        {
+            if (number == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return number * Factorial(number - 1);
+            }
         }
     }
 }
