@@ -1,0 +1,15 @@
+﻿<Window x:Class="FactorialHomework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FactorialHomework"
+        mc:Ignorable="d"
+        Title="Калькулятор факториалов" Height="200" Width="550">
+    <Grid>
+        <TextBox Name="numberTextBox" HorizontalAlignment="Left" Margin="256,10,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" Height="47" FontSize="35"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Введите число:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35"/>
+        <Button Content="Посчитать факториал" Click="CalculateFactorial" HorizontalAlignment="Left" Margin="121,86,0,0" VerticalAlignment="Top" FontSize="30"/>
+
+    </Grid>
+</Window>
